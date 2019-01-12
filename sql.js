@@ -18,6 +18,7 @@ router.get('/allcaipaio', function(req, res){
         var datas = [];
         for (va in results) {
             var value = {"period": va.period}
+            print('..................'+value, va, va.period)
             datas.push(value);
         }
         res.send(JSON.stringify(datas))
