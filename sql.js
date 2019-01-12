@@ -13,7 +13,7 @@ router.get('/allcaipaio', function(req, res){
     })
 
     con.connect()
-    con.query('SELECT *FROM caipiao', function(err, results){
+    con.query('SELECT *FROM caipiao limit 20', function(err, results){
         if (err) throw err;
         var datas = [];
         for (va in results) {
