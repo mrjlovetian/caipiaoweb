@@ -16,7 +16,8 @@ router.get('/allcaipaio', function(req, res){
     con.query('SELECT *FROM caipiao limit 20', function(err, results){
         if (err) throw err;
         var datas = [];
-        for (va in results) {
+        for (var i=0; i<results.length;i++) {
+            var va = results[i];
             var value = {"period": va.period}
             console.log('..................'+value, va, va.period)
             datas.push(value);
