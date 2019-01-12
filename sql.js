@@ -14,7 +14,7 @@ router.get('/allcaipaio', function(req, res){
 
     con.connect()
     con.query('SELECT *FROM caipiao', function(err, results){
-        if err throw err;
+        if (err) throw err;
         var datas = [];
         for (va in results) {
             var value = {"period": va.period}
@@ -25,6 +25,6 @@ router.get('/allcaipaio', function(req, res){
 })
 
 app.listen(3000, function(err){
-    if err throw err;
+    if (err) throw err;
     console.log('server starting!!')
 })
