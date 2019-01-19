@@ -21,7 +21,7 @@ router.get('/allcaipaio', function(req, res){
             var value = {"period": va.period, 'one':va.one, 'two':va.two, 'three':va.three, 'four':va.four, 'five':va.five, 'six':va.six, 'seven':va.seven}
             datas.push(value);
         }
-        var jsonVal = []
+        var jsonVal = new Array
         jsonVal['data'] = datas;
         jsonVal['error'] = '0';
         jsonVal['message'] = 'success';
