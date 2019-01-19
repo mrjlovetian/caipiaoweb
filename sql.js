@@ -18,8 +18,7 @@ router.get('/allcaipaio', function(req, res){
         var datas = [];
         for (var i=0; i<results.length;i++) {
             var va = results[i];
-            var value = {"period": va.period}
-            console.log('..................'+value, va, va.period)
+            var value = {"period": va.period, 'one':va.one, 'two':va.two, 'three':va.three, 'four':va.four, 'five':va.five, 'six':va.six, 'seven':va.seven}
             datas.push(value);
         }
         res.send(JSON.stringify(datas))
