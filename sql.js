@@ -25,7 +25,7 @@ router.get('/allcaipaio', function(req, res){
         jsonVal['data'] = datas;
         jsonVal['error'] = '0';
         jsonVal['message'] = 'success';
-        print('result', jsonVal)
+        console.log('result', jsonVal)
         res.send(JSON.stringify(jsonVal))
     })
 })
